@@ -1,0 +1,1058 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h6,
+h5,
+span,
+p {
+    cursor: default;
+}
+
+ul {
+    list-style: none;
+}
+
+/* /////////////Header/////// */
+.Header {
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    transform: 0.5s all ease-in-out;
+    cursor: default;
+}
+
+
+.Headerupper,
+.HeaderLower {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.right {
+    color: white;
+}
+
+.right>button {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+/* //////NavBar////// */
+.menu__wrapper {
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 60rem;
+    padding: 0 1rem;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.menu__bar {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.navigation {
+    margin-left: 32px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    gap: 16px;
+    background-color: transparent;
+}
+
+.navigation>li {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    min-height: 36px;
+}
+
+.navigation>li>a {
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation>li>button {
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    margin-right: -4px;
+    align-items: center;
+    min-height: 36px;
+    gap: 4px;
+    color: white;
+    font-weight: 400;
+    flex-wrap: nowrap;
+    padding: 4px 10px;
+    white-space: nowrap;
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation>li>button:hover,
+.navigation>li>a:hover {
+    color: #2f60ae;
+}
+
+.svg {
+    margin-top: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation>li:hover>button .svg {
+    transform: rotate(0.5turn);
+}
+
+.navigation>li:hover .dropdown {
+    display: block;
+}
+
+.dropdown__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+}
+
+.dropdown {
+    margin-top: -25px;
+    border-radius: 8px;
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background-color: white;
+    z-index: 5;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.99) translateY(-0.7em);
+        transform-origin: top;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+
+
+.list-items-with-description span {
+    list-style: none;
+    width: 100px;
+    padding: 5px 10px;
+}
+
+.list-items-with-description {
+    list-style: none;
+    width: fit-content;
+}
+
+
+
+.list-items-with-description span:hover {
+    color: #2f60ae;
+}
+
+.burger-menu {
+    display: none !important;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#menu p {
+    transition: 0.2s;
+}
+
+#menu p:hover {
+    color: #2f60ae;
+}
+
+@media (max-width:44rem) {
+    .hide {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        min-height: 2.5rem;
+        min-height: 0.25rem;
+        pointer-events: all;
+        background-color: transparent;
+    }
+
+    .burger-menu:hover {
+        background-color: transparent;
+    }
+
+    #svg {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+
+.BackGround {
+    width: 100%;
+    height: 55vh;
+    position: relative;
+    object-fit: fill;
+}
+
+
+.centerText {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    cursor: default;
+    top: 25%;
+    transform: translate(-50%, -25%);
+    color: white !important;
+}
+
+.centerText>p {
+    text-align: center;
+    font-size: 25px;
+}
+
+.left {
+    color: white;
+}
+
+#collapsible-nav-dropdown {
+    color: white !important;
+}
+
+.BookTripCard {
+    position: relative !important;
+    z-index: 5;
+    top: -15vh;
+    border: none !important;
+    left: 50%;
+    width: 80%;
+    height: fit-content;
+    transform: translateX(-50%);
+    box-shadow: 0px 20px 25px -13px rgba(77, 132, 200, 0.4);
+}
+
+.selectInput {
+    width: 25%;
+    height: 100px !important;
+    background-color: #739fce53 !important;
+    border: none !important;
+}
+
+.fromHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fromHeader>span {
+    color: rgba(128, 128, 128, 0.705);
+    font-weight: 400;
+}
+
+.switch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d84c8;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 98%;
+    z-index: 5;
+    cursor: pointer;
+    outline: white solid 2px;
+}
+
+.selectDate:focus {
+    border: none !important;
+}
+
+.arrows {
+    rotate: 180deg;
+}
+
+.searchToBook {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content !important;
+    background-color: #4d84c8 !important;
+}
+
+.searchToBook:hover {
+    background-color: #2f60ae !important;
+}
+
+.card3 {
+    background-image: url("./images/Travel\ Diary_\ Paris\ in\ the\ Spring.jpg");
+}
+
+.card2 {
+    background-image: url("./images/London\ 2\ day\ Itinerary\ –\ London\ in\ 2\ days\ _\ Travelgal\ Nicole.jpg");
+}
+
+.card1 {
+
+    background-image: url("./images/HOW\ TO\ LIVE\ A\ LIFE\ OF\ TRAVEL_\ TIPS\ TO\ GETTING\ STARTED.jpg");
+}
+
+.cardHover {
+    width: 80%;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: 0.5s;
+}
+
+.cardHover:hover {
+    background-size: 110%;
+}
+
+
+.cardHover::after {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 15%;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.456);
+    border-radius: 41% 41% 10% 10% / 46% 51% 8% 8%;
+}
+
+.destinationInput {
+    width: 50%;
+    height: fit-content;
+    border: none !important;
+    background-color: #739fce53 !important;
+}
+
+.Grid {
+    width: 80%;
+    margin: auto;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    position: relative;
+    margin-top: 5vh;
+}
+
+.div1 {
+    width: 100%;
+    height: 70vh;
+    border-radius: 5%;
+    grid-area: 1 / 1 / 5 / 3;
+    background-image: url("./images/pin\ ⏤\ ughlivia.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.div2 {
+    width: 100%;
+    height: 20vh;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./images/53dba2b0-d964-400e-a1c6-a9b09f74c6af.jpg");
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.div3 {
+    width: 100%;
+    height: 20vh;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: bottom;
+    background-image: url("./images/Darjeeling.jpg");
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.div4 {
+    grid-area: 3 / 3 / 5 / 4;
+    width: 100%;
+    height: 29vh;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./images/20\ Famous\ Landmarks\ in\ Malaysia.jpg");
+
+}
+
+.div5 {
+    grid-area: 1 / 4 / 3 / 5;
+    width: 100%;
+    height: 28vh;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./images/Pelling.jpg");
+}
+
+.div6 {
+    grid-area: 3 / 4 / 4 / 5;
+    margin-top: -120px;
+    width: 100%;
+    height: 20vh;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./images/5\ Day\ Phuket\ Thailand\ Itinerary\ -\ Guide\ To\ Things\ To\ Do.jpg");
+}
+
+.div7 {
+    grid-area: 4 / 4 / 5 / 5;
+    width: 100%;
+    margin-top: -120px;
+    height: 21vh;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./images/10\ Places\ For\ The\ Best\ Views\ In\ Sydney.jpg");
+}
+
+.div8 {
+    grid-area: 1 / 5 / 3 / 6;
+    width: 100%;
+    height: 32vh;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: top;
+    background-image: url("./images/London.jpg");
+}
+
+.div9 {
+    grid-area: 3 / 5 / 5 / 6;
+    width: 100%;
+    height: 32vh;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: top;
+    margin-top: -80px;
+    background-image: url("./images/Monument\ Valley.jpg");
+}
+
+.div10 {
+    background-color: #4d84c8;
+    position: absolute !important;
+    top: 80%;
+    right: 0;
+    width: 15.6vw !important;
+    height: 5vh;
+
+}
+
+.div {
+    position: relative;
+}
+
+.div::after,
+.triocard::after {
+    position: absolute;
+    content: "";
+    background-color: #18253393;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-radius: 41% 41% 10% 10% / 46% 51% 8% 8%;
+    transition: 1s ease;
+}
+
+.div:hover.div::after,
+.triocard:hover.triocard::after {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+.HotelsTab {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+}
+
+.TourTab {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.SpaceTab {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.eventsTab {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.HotelCard {
+    width: 20%;
+    border: 1px solid #739fce35 !important;
+}
+
+.discountBadge {
+    background-color: #739fce;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: -3vh;
+    margin-left: auto;
+    outline: white solid 2px;
+    color: white;
+    z-index: 5;
+}
+
+.discountBadge>span {
+    position: relative;
+    top: 0.5vh;
+}
+
+.HotelCard {
+    transition: 0.5s;
+}
+
+.HotelCard:hover,
+.mountain-card:hover {
+    box-shadow: 0px 20px 25px -13px rgba(77, 132, 200, 0.4);
+}
+
+.trioCardParent {
+    width: 80%;
+    margin: 20vh auto 20vh;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 15px;
+}
+
+.trioCard1 {
+    border: none !important;
+    grid-area: 1/1/3/3;
+    background-size: cover;
+    background-image: url("./images/_The\ Annapurna\ Range\ In\ The\ Himalayas__\ by\ Stocksy\ Contributor\ _Shikhar\ Bhattarai_.jpg");
+}
+
+.trioCard2 {
+    border: none !important;
+    grid-area: 1/3/3/4;
+    background-size: cover;
+    background-image: url("./images/Andaman\ Nicobar\ Tourism.jpg");
+}
+
+.trioCard3 {
+    border: none !important;
+    grid-area: 1/4/3/5;
+    background-image: url("./images/How\ to\ Take\ Amazing\ Travel\ Photos\ -\ Tips\ From\ a\ Professional\ Travel\ Photographer.jpg");
+    background-size: cover;
+}
+
+
+.cardContent {
+    position: absolute;
+    bottom: 2vh;
+    color: white;
+    z-index: 5;
+    height: fit-content;
+    width: 75%;
+}
+
+.cardContent>span {
+    height: 50px;
+}
+
+.HolidayBTN {
+    margin-top: 2vh !important;
+    padding: 0 0.2rem !important;
+    font-weight: 400 !important;
+    text-transform: capitalize;
+}
+
+.Slider {
+    width: 80%;
+    margin: 20vh auto 10vh;
+    height: min-content;
+}
+
+.mySwiper {
+    height: 55vh;
+    width: 85%;
+}
+
+
+.tabHolder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.mountain-card {
+    transition: 0.3s;
+    border: #739fce35 solid 1px;
+    border-radius: 5px;
+    display: flex;
+    height: 80px;
+    width: 100%;
+}
+
+.mountain-image {
+    width: 20%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.mountain-content {
+    margin: 15px 0 -10px;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+}
+
+
+
+
+.innerFooter {
+    display: grid;
+    width: 80%;
+    padding: 30px 15px;
+    margin: auto;
+    height: 100%;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 5px;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    height: min-content;
+    background-color: #dae4fa;
+}
+
+.footerCol {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.col1div1,
+.col1div2,
+.col1div3 {
+    border-left: #2f60ae solid 2px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    height: fit-content;
+}
+
+.col1div1>p:nth-child(2),
+.col1div2>p:nth-child(2),
+.col1div3>p:nth-child(2) {
+    color: #2f60ae;
+    font-weight: 600;
+    transition: 0.5s;
+    margin-top: -15px;
+}
+
+.col1div1>p:nth-child(2):hover,
+.col1div2>p:nth-child(2):hover {
+    color: black;
+}
+
+.footerCol>p:hover {
+    color: #2f60ae;
+    cursor: pointer;
+}
+
+.footerCol>h6 {
+    width: fit-content;
+    padding-bottom: 5px;
+    border-bottom: #2f60ae solid 1px;
+}
+
+.footerCol>p {
+    transition: 0.3s;
+    font-weight: 400;
+    width: fit-content;
+}
+
+.finalfooter {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: white;
+}
+
+.payMethods {
+    width: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inner {
+    color: #2f60ae;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.mail {
+    width: 100%;
+    height: fit-content;
+    border-top: 1px solid #739fce53;
+}
+
+.mail>div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.4fr;
+    margin: auto;
+    width: 80%;
+    padding: 25px 0;
+}
+
+.mail>div>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageANDtext {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.imageANDtext>div {
+    position: relative;
+    top: 50%;
+}
+
+.mail img {
+    width: 30%;
+}
+
+.newsParent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, fit-content);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+#div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 80%;
+    margin: 5px auto;
+    border: none;
+}
+
+#div1>div>p:nth-child(1),
+#div2>div>p:nth-child(1),
+#div3>div>p:nth-child(1),
+#div4>div>p:nth-child(1) {
+    transition: 0.3s;
+    line-height: 15px;
+}
+
+#div1>div>p:nth-child(1):hover,
+#div2>div>p:nth-child(1):hover,
+#div3>div>p:nth-child(1):hover,
+#div4>div>p:nth-child(1):hover {
+    color: #2f60ae;
+}
+
+#div1>div,
+#div2>div,
+#div3>div,
+#div4>div {
+    margin-left: 3%;
+}
+
+#div1>img,
+#div2>img,
+#div3>img,
+#div4>img {
+    width: 25%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#div1:hover,
+#div2:hover,
+#div3:hover,
+#div4:hover {
+    box-shadow: none;
+}
+
+#div2 {
+    width: 80%;
+    margin: 5px auto;
+    border: none;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#div3 {
+    width: 80%;
+    margin: 5px auto;
+    border: none;
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#div4 {
+    width: 80%;
+    margin: 5px auto;
+    border: none;
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+#div5 {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: none;
+    grid-area: 1 / 2 / 5 / 5;
+    position: relative;
+}
+
+#div5>p:nth-child(2) {
+    transition: 0.3s;
+}
+
+#div5>p:nth-child(2):hover {
+    color: #2f60ae;
+}
+
+.articlBTN:hover {
+    background-color: transparent !important;
+    padding-right: 5px;
+    color: black;
+}
+
+.articlArrow {
+    transition: all 0.3s ease;
+    margin-left: 5px;
+}
+
+.articlBTN:hover .articlArrow {
+    margin-left: 10px;
+}
+
+.Text {
+    display: flex;
+    flex-direction: column;
+}
+
+.ErrorMsg {
+    width: 100%;
+    height: auto;
+}
+
+.ErrorMsg>div {
+    padding: 50px 0 50px 0;
+    width: 80%;
+    margin: auto;
+}
+
+.ErrorMsg>div>img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+}
+
+.returnToHome {
+    text-transform: capitalize;
+    background-color: #2f60ae !important;
+    margin-left: 50% !important;
+    transform: translateX(-50%);
+}
+
+.sections,
+.Categories,
+.Trips {
+    width: 80%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 5px;
+    padding: 50px;
+    margin: auto;
+}
+
+.sectionCard,
+.categoryCard,
+.tripCard {
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    border: #739fce53 solid 1px;
+    margin-bottom: 5rem;
+    transition: 0.5s ease all;
+}
+
+.sectionCard:hover,
+.categoryCard:hover,
+.tripCard:hover {
+    box-shadow: 0px 20px 25px -13px rgba(77, 132, 200, 0.4);
+}
+
+
+
+.sectionCard>img,
+.categoryCard>img,
+.tripCard>img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25rem;
+}
+
+.secCardDetails li {
+    margin-left: -20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.3s all ease;
+    font-weight: 600;
+}
+
+.secCardDetails li:hover {
+    color: #2f60ae;
+}
+
+.secCardDetails {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.login,
+.signup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    width: 80%;
+    margin: auto;
+    height: fit-content;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    width: 60%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    gap: 25px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    width: 60%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    gap: 35px;
+    padding-top: 65px;
+}
+
+.LoginBTN {
+    font-size: 18px;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+.login>img,
+.signup>img {
+    width: 100%;
+}
