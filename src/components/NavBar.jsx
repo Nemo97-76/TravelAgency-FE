@@ -10,12 +10,12 @@ const NavBar = () => {
     return (
         <div className="holder">
             <div className="menu__wrapper">
-                <div calssName="menu__bar">
+                <div className="menu__bar">
+                    <a href="/" aria-label="home" className="logo">
+                        <img src={logo} alt="logo" />
+                    </a>
                     <nav>
                         <ul className="navigation hide">
-                            <a href="/" aria-label="home" className="logo">
-                                <img src={logo} alt="logo" />
-                            </a>
                             <li>
                                 <a href="/" >Home</a>
                             </li>
@@ -62,10 +62,10 @@ const NavBar = () => {
                     </nav>
                 </div>
                 <Button aria-label="Open menu" className="burger-menu" type="button" onClick={onToggle}><IoIosMenu style={{ fontSize: "50px" }} /></Button>
-                <Collapse in={isOpen} >
+                <Collapse in={isOpen} style={{ width: '100%' }}>
                     <Box
                         animateOpacity
-                        style={{ borderRadius: "5%", border: "none", position: "relative" }}
+                        style={{ borderRadius: "5%", border: "none" }}
                         p='15px'
                         color='black'
                         mt='4'
@@ -74,10 +74,16 @@ const NavBar = () => {
                         shadow='md'
                     >
                         <div id="menu">
-                            <p>home</p>
-                            <p>sections</p>
-                            <p>categories</p>
-                            <p>trips</p>
+                            <p onClick={() => { x("/"); onToggle(); }}>home</p>
+                            <p onClick={() => { x("/sections"); onToggle(); }}>sections</p>
+                            <p onClick={() => { x("/categories"); onToggle(); }}>categories</p>
+                            <p onClick={() => { x("/trips"); onToggle(); }}>trips</p>
+                            <p onClick={() => { x("/destinations"); onToggle(); }}>destinations</p>
+                            <hr />
+                            <div className="mobile-auth">
+                                <button onClick={() => { x("/login"); onToggle(); }}>Login</button>
+                                <button onClick={() => { x("/signup"); onToggle(); }}>Sign Up</button>
+                            </div>
                         </div>
                     </Box>
                 </Collapse>

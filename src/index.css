@@ -227,6 +227,51 @@ ul {
     height: 1.5rem;
     width: 1.5rem;
   }
+
+  .Headerupper,
+  .HeaderLower {
+    width: 95%;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .menu__wrapper {
+    max-width: 100%;
+    margin-top: 5px;
+  }
+
+  #menu {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  #menu p {
+    padding: 10px 0;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  .mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .mobile-auth button {
+    background-color: #2f60ae;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
 }
 
 .BackGround {
