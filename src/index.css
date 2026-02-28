@@ -200,7 +200,7 @@ ul {
   color: #2f60ae;
 }
 
-@media (max-width: 44rem) {
+@media (max-width: 4rem) {
   .hide {
     display: none;
   }
