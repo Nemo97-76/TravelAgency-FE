@@ -29,14 +29,14 @@ ul {
 }
 .Headerupper,
 .HeaderLower {
-  width: 80%;
+  width: 95%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   background-color: transparent;
 }
 
-.Headerupper{
+.Headerupper {
   margin-top: 15px;
 }
 .right {
@@ -204,6 +204,21 @@ ul {
   .hide {
     display: none;
   }
+   .mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .mobile-auth button {
+    background-color: #2f60ae;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
 
   .burger-menu {
     display: flex !important;
@@ -231,18 +246,19 @@ ul {
 
 .BackGround {
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   position: relative;
   object-fit: cover;
 }
 
 .centerText {
   position: absolute;
+  text-align: center;  
   z-index: 1;
   left: 50%;
   cursor: default;
-  top: 20%;
-  transform: translate(-50%, -25%);
+  top: 10dvh;
+  transform: translate(-50%, 5dvh);
   color: white !important;
   width: max-content;
 }
@@ -251,6 +267,8 @@ ul {
   text-align: center;
   font-size: 25px;
   font-weight: 700;
+  min-width: 300px;
+  text-wrap: wrap;
 }
 
 .left {
@@ -261,20 +279,25 @@ ul {
   color: white !important;
 }
 
-.BookTripCard {
-  position: relative !important;
-  z-index: 5;
-  top: -15vh;
-  border: none !important;
-  left: 50%;
-  width: 80%;
+.selectTrip {
+  position: absolute !important;
+  width: 50%;
+  min-width: 5rem;
   height: fit-content;
+  top: 50vh;
+  left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0px 20px 25px -13px rgba(77, 132, 200, 0.4);
+  border-radius: 20px;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: space-evenly !important;
+  gap: 25px;
+  padding: 20px;
 }
-
 .selectInput {
-  width: 25%;
+  min-width: 150px;
+  width: 20%;
   height: 100px !important;
   background-color: #739fce53 !important;
   border: none !important;
@@ -289,21 +312,6 @@ ul {
   color: rgba(128, 128, 128, 0.705);
   font-weight: 400;
 }
-
-.switch {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #4d84c8;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 98%;
-  z-index: 5;
-  cursor: pointer;
-  outline: white solid 2px;
-}
-
 .selectDate:focus {
   border: none !important;
 }
@@ -313,9 +321,6 @@ ul {
 }
 
 .searchToBook {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   width: fit-content !important;
   background-color: #4d84c8 !important;
 }
@@ -324,34 +329,25 @@ ul {
   background-color: #2f60ae !important;
 }
 
-.card3 {
-  background-image: url("./images/Travel\ Diary_\ Paris\ in\ the\ Spring.jpg");
-}
-
-.card2 {
-  background-image: url("./images/London\ 2\ day\ Itinerary\ –\ London\ in\ 2\ days\ _\ Travelgal\ Nicole.jpg");
-}
-
-.card1 {
-  background-image: url("./images/HOW\ TO\ LIVE\ A\ LIFE\ OF\ TRAVEL_\ TIPS\ TO\ GETTING\ STARTED.jpg");
-}
-
 .cardHover {
   width: 80%;
-  height: 60vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  transition: 0.5s;
+  height: 37rem;
+
+}
+.cardHover img{
+  width: 100%;
+  height: 37rem;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.cardHover:hover {
-  background-size: 110%;
+.cardHover:hover  img{
+  transform: scale(1.1);
 }
 
 .cardHover::after {
   position: absolute;
+  z-index: 5;
   width: 100%;
   left: 0;
   bottom: 0;

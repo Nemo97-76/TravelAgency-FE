@@ -1,5 +1,3 @@
-import React from "react";
-import BookTrip from "../components/bookTrip.jsx";
 import Intro from "../components/intro.jsx";
 import Grid from "../components/Grid.jsx";
 import Deals from "../components/Deals.jsx";
@@ -11,8 +9,6 @@ import News from "../components/travel news.jsx";
 const Home = () => {
     return (
         <>
-            <BookTrip />
-
             <Intro />
 
             <Grid />

@@ -12,17 +12,21 @@ import Trips from "./pages/trips.jsx";
 import Destinations from "./pages/destinations.jsx";
 import Login from "./pages/login.jsx";
 import Signup from "./pages/signup.jsx";
+import SelectTrip from "./components/seclectTrip.jsx";
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Header />
-        <img src={BG} alt="intro bg" className="BackGround" />
 
-        <div className="centerText">
-          <h1 style={{ fontSize: "70px" }}>Explore the world together</h1>
-          <p>Find awesome flights, hotel, tour, car and packages</p>
-        </div>
+          <img src={BG} alt="intro bg" className="BackGround" />
+      {/*     <div className="centerText">
+            <h1 style={{ fontSize: "70px" }}>Explore the world together</h1>
+            <p>Find awesome flights, hotel, tour, car and packages</p>
+          </div>
+          <SelectTrip /> */}
+
+
         <Routes>
           <Route expact path="/" element={<Home />} />
           <Route path="/sections" element={<Sections />} />

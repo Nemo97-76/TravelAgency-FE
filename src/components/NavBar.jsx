@@ -10,7 +10,7 @@ const NavBar = () => {
     return (
         <div className="holder">
             <div className="menu__wrapper">
-                <div calssName="menu__bar">
+                <div className="menu__bar">
                     <nav>
                         <ul className="navigation hide">
                             <a href="/" aria-label="home" className="logo">
@@ -65,7 +65,7 @@ const NavBar = () => {
                 <Collapse in={isOpen} >
                     <Box
                         animateOpacity
-                        style={{ borderRadius: "5%", border: "none", position: "relative" }}
+                        style={{ borderRadius: "10px", border: "none", position: "relative",textTransform:"capitalize" }}
                         p='15px'
                         color='black'
                         mt='4'
@@ -74,10 +74,16 @@ const NavBar = () => {
                         shadow='md'
                     >
                         <div id="menu">
-                            <p>home</p>
-                            <p>sections</p>
-                            <p>categories</p>
-                            <p>trips</p>
+                       <p onClick={() => { x("/"); onToggle(); }}>home</p>
+                            <p onClick={() => { x("/sections"); onToggle(); }}>sections</p>
+                            <p onClick={() => { x("/categories"); onToggle(); }}>categories</p>
+                            <p onClick={() => { x("/trips"); onToggle(); }}>trips</p>
+                            <p onClick={() => { x("/destinations"); onToggle(); }}>destinations</p>
+                            <hr />
+                            <div className="mobile-auth">
+                                <button onClick={() => { x("/login"); onToggle(); }}>Login</button>
+                                <button onClick={() => { x("/signup"); onToggle(); }}>Sign Up</button>
+                            </div>
                         </div>
                     </Box>
                 </Collapse>
